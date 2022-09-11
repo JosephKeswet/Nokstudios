@@ -1,11 +1,12 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
-import logoBlack from '../Assets/logos/Nok-Logo black.svg'
+import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
 import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faPinterest, faSquareFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Input from '../components/Input'
 import Button from '../components/Button'
+import {motion} from 'framer-motion'
 // import Contact_Bg from '../Assets/img/Contact_Bg.png'
 
 
@@ -14,6 +15,22 @@ const Contact = () => {
     <div>
         {/* This is where the navbar goes */}
         <NavBar  logo={logoBlack} color="text-black" paddingTop="pt-[1px]" shadow="shadow-md" />
+
+        <motion.div initial='hidden' animate='visible'
+      variants={{
+        hidden: {
+          scale: .8,
+          opacity: 0
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 1
+          }
+        },
+      }}
+      >
 
         <main className='flex justify-center  pt-[226px]  mt-[68px]  h-[833px] bg-[url("../Assets/img/Contact_Bg.png")]'>
            {/* <div className='flex justify-center pt-[226px]'>  */}
@@ -41,6 +58,7 @@ const Contact = () => {
             {/* </div> */}
         </main>
 
+      </motion.div>
 
         {/* Footer section */}
         <Footer/>

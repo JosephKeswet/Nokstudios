@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
-import logoBlack from '../Assets/logos/Nok-Logo black.svg'
+import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
 import Workspace from '../Assets/logos/workspace.png'
 import Warrior1 from '../Assets/img/WarriorDagger.png'
 import Warrior2 from '../Assets/img/Warrior.png'
@@ -8,15 +8,34 @@ import Team1 from '../Assets/img/Team1.png'
 import Vector from '../Assets/img/Vector.png'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import {motion} from 'framer-motion'
+
 
 
 const About = () => {
   return (
-    <div> 
+    <motion.div exit={{
+      opacity: 0
+    }}> 
       {/* Navbar */}
       <NavBar logo={logoBlack} color="text-black" paddingTop="pt-[1px]" shadow="shadow-md"/>
 
       {/* This is the about us section */}
+      <motion.div initial='hidden' animate='visible'
+      variants={{
+        hidden: {
+          scale: .8,
+          opacity: 0
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 1
+          }
+        },
+      }}
+      >
       <section className='mx-[140px]'>
 
         <h1 className='text-[40px] font-semibold leading-[51px] text-center mt-[83px] mb-[83px]'>About Us</h1>
@@ -46,22 +65,23 @@ const About = () => {
             <div className='w-[277px] '>
 
               <div className='relative'>
-                  <div className='absolute z-10 bg-[url("../Assets/img/Team1.png")] bg-contain'>
-                    <Image src={Vector} alt='Team Member'/>
+                  <div className='pentagon'>
+                    {/* <Image src={Vector} alt='Team Member'/> */}
                   </div>
-                  {/* <div className=' absolute  top-[20px] left-[10px]  '>
-                    <Image  src={Team1}  alt='Team Member' objectFit='cover'  />
-                  </div> */}
+                  {/* <div className='pentagon'> */}
+                    {/* <Image  src={Team1}  alt='Team Member' objectFit='cover'  /> */}
+                  {/* </div> */}
               </div>
             </div>
           </main>
       </section>
+      </motion.div>
 
       <footer>
         <Footer/>
       </footer>
 
-    </div>
+    </motion.div>
   )
 }
 
