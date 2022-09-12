@@ -14,7 +14,7 @@ const Cards = ({img,service,position,ml}) => {
                   duration: .2
                 }
               }}
-              // whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
               className={`w-[376px] h-[456px] ${position} ${ml} cursor-pointer`}>
             <Image src={img} alt='Concept Art Service' className='w-[144px] h-[144px]'/>
             <div className='flex items-center justify-center w-[376px] h-[101px] bg-[#212121] absolute bottom-[-1px] z-10'>

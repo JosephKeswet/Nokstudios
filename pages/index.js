@@ -90,7 +90,7 @@ export default function Home() {
             <div className='flex gap-[62px] '>
               <div>
                 <p className='text-[28px] leading-[40px] w-[643px] font-normal pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
-                <Image src={Pen} alt='Pen Icon' className='w-[144px] h-[144px]'/>
+                <Image src={Pen} alt='Pen Icon' className='w-[144px] h-[144px] animate-pulse'/>
               </div>
               <motion.div 
               // whileHover={{
@@ -102,7 +102,7 @@ export default function Home() {
               whileTap={{scale: 0.9}}
               className='cursor-pointer drop-shadow-lg hover:drop-shadow-2xl  z-20'
               >
-                <Image src={Angel} alt='Angel Art' className='w-[641px] h-[906px]'/>
+                <Image src={Angel} alt='Angel Art' className='w-[641px] h-[906px] '/>
               </motion.div>
             </div>
 
@@ -123,7 +123,7 @@ export default function Home() {
               </motion.div>
 
               <div>
-                  <Image src={BoxIcon} alt='Box Icon' className='w-[144px] h-[144px]'/>
+                  <Image src={BoxIcon} alt='Box Icon' className='w-[144px] h-[144px] animate-pulse '/>
                   <p className='text-[28px] leading-[40px] w-[643px] font-normal pb-[20px]'>We bring works to life make imaginations a reality. Watch your dreams unfold and make worlds of your own.</p>
               </div>
             </div>
