@@ -105,7 +105,18 @@ const Book = () => {
 
               {/* This is the submit button for the form */}
               <div className='flex items-center justify-center'>
+              <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='cursor-pointer  hover:drop-shadow-xl'
+              >
                   <Button bgColor="bg-[#DC5539]" btnText="SUBMIT" height="h-[50px]" width="w-[246px]" fontSize="text-[20px]" lineHeight="leading-[24px]" fontWeight="font-bold" textColor="text-white"/>
+              </motion.div>
               </div>
             </form>
         </main>

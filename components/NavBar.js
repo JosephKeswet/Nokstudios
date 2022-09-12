@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import {motion} from 'framer-motion'
+// import '../styles/select.css'
 
 const NavBar = ({logo,color,paddingTop,shadow,scrollFunc}) => {
   return (
@@ -28,21 +29,83 @@ const NavBar = ({logo,color,paddingTop,shadow,scrollFunc}) => {
             </div>
 
             <ul className={`flex justify-between gap-[50px] ${color}`}>
+            <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='hover-underline-animation'
+              >
                 <Link href='/'>
                   <li className='cursor-pointer'>Home</li>
                 </Link>
+              </motion.div>
+
+
+              <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='hover-underline-animation'
+              >
                 <Link href='/About'>
                 <li className='cursor-pointer'>About Us</li>
                 </Link>
+              </motion.div>
+
+              <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='hover-underline-animation'
+              >
                 {/* <Link href='/Services'> */}
                 <li className='cursor-pointer' onClick={scrollFunc}>Services</li>
                 {/* </Link> */}
+
+              </motion.div>
+
+              <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='hover-underline-animation'
+              >
                 <Link href='/MainGallery'>
                 <li className='cursor-pointer'>Our Works</li>
                 </Link>
+              </motion.div>
+
+
+                       <motion.div 
+              // whileHover={{
+              //   scale: 1.01,
+              //   transition: {
+              //     duration: .2
+              //   }
+              // }}
+              whileTap={{scale: 0.9}}
+              className='hover-underline-animation'
+              >
                 <Link href='/Contact'>
                 <li className='cursor-pointer'>Contact Us</li>
                 </Link>
+              </motion.div>
  
             </ul>
 
