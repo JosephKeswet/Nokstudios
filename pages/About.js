@@ -4,11 +4,15 @@ import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
 import Workspace from '../Assets/logos/workspace.png'
 import Warrior1 from '../Assets/img/WarriorDagger.png'
 import Warrior2 from '../Assets/img/Warrior.png'
+import Charles from '../Assets/img/Charles.png'
 import Team1 from '../Assets/img/Team1.png'
-import Vector from '../Assets/img/Vector.png'
+// import Vector from '../Assets/img/Vector.png'
+import Vector from '../Assets/img/Vector (1).png'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import {motion} from 'framer-motion'
+import Team from '../components/Team'
+
 
 
 
@@ -61,19 +65,14 @@ const About = () => {
         <h1 className='text-[40px] font-semibold leading-[51px] text-center text-[#292929] mt-[80px] mb-[60px]'>Meet the team</h1>
       <section className='bg-[#FAF7F7] h-[724px]'>
           {/* This is where we display the images of each team member */}
-          <main>
-            <div className='w-[277px] '>
-
-              <div className='relative'>
-                  <div className='pentagon'>
-                    {/* <Image src={Vector} alt='Team Member'/> */}
-                  </div>
-                  {/* <div className='pentagon'> */}
-                    {/* <Image  src={Team1}  alt='Team Member' objectFit='cover'  /> */}
-                  {/* </div> */}
+            <main className='w-[1176px] h-[566px] pt-10'>
+              <div className='pentagon_b'>
+                <div className='pentagon text-transparent hover:text-white'>
+                    <h1 className='mb-[24px] text-center text-[12px] font-semibold leading-4 w-[109px] h-[16px]'>Lead Character artist</h1>
+                </div>
               </div>
-            </div>
-          </main>
+            </main>
+
       </section>
       </motion.div>
 
