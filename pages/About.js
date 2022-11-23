@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
+import logoWhite from '../Assets/logos/Nok-Logo white 1.svg'
 import Workspace from '../Assets/logos/workspace.png'
 import Warrior1 from '../Assets/img/WarriorDagger.png'
 import Warrior2 from '../Assets/img/Warrior.png'
@@ -22,7 +23,11 @@ const About = () => {
       opacity: 0
     }}> 
       {/* Navbar */}
-      <NavBar logo={logoBlack} color="text-black" paddingTop="pt-[1px]" shadow="shadow-md"/>
+      <NavBar logo={logoBlack} logoB={logoWhite} color="text-black" colorB='text-white' paddingTop="pt-[1px]" 
+      shadow="shadow-md" 
+      bgBlack='bg-white'
+      bgWhite='bg-slate-900'
+      />
 
       {/* This is the about us section */}
       <motion.div initial='hidden' animate='visible'
@@ -39,44 +44,52 @@ const About = () => {
           }
         },
       }}
+      className='pt-[150px]'
       >
-      <section className='mx-[140px]'>
+      <section className='mx-4 lg:mx-0 xl:mx-[140px] '>
+      <div className='flex justify-center w-[450px] sm:w-[500px] md:w-[500px] lg:w-[900px] xl:w-[1200px]'>
+        <h1 className='text-3xl leading-10 mb-20  lg:text-[40px] font-semibold lg:leading-[51px] text-center lg:mt-[83px] lg:mb-[83px]'>About Us</h1>
+        </div>
 
-        <h1 className='text-[40px] font-semibold leading-[51px] text-center mt-[83px] mb-[83px]'>About Us</h1>
-
-          <main className=' relative h-[1427px]'>
-            <div className='flex gap-[59px]'>
-                <div className='w-[658px] h-[314px] '>
-                  <Image src={Workspace} alt='Workspace Icon' className='w-[126px] h-[120px]'/>
-                  <p className='mt-[41px] text-[28px] leading-[40px] font-normal h-[314px]'>At Nok Animation Studios, we offer high quality computer generated graphics and art services in the form of VFX as well as animated films, game assets and other 3d services for our clients in different parts of the world using innovative means to ensure our services are highy affordable while maintaining very high qualities.</p>
+          <main className='mx-auto w-[450px] sm:w-[500px] md:w-[500px] relative  lg:w-[900px] lg:h-[1400px] xl:w-[1200px] xl:h-[1427px]'>
+            <div className='w-[450px] mx-auto sm:w-[500px]  md:w-[600px] lg:w-[800px] xl:w-[1200px] lg:flex gap-[59px]'>
+                <div className='w-[450px] lg:w-[658px] lg:h-[314px] '>
+                  <div className='w-[80px] lg:w-[150px]'>
+                      <Image src={Workspace} alt='Workspace Icon' width={300} height={300}/>
+                  </div>
+                  <p className='md:text-2xl lg:mt-[41px] lg:text-[28px] lg:leading-[40px] font-normal lg:h-[314px]'>At Nok Animation Studios, we offer high quality computer generated graphics and art services in the form of VFX as well as animated films, game assets and other 3d services for our clients in different parts of the world using innovative means to ensure our services are highly affordable while maintaining very high qualities.</p>
                 </div>
-              <Image src={Warrior1} alt='Game Character' className='w-[543px] h-[830px]'/>
+                <div className='mt-6'>
+                  <Image src={Warrior1} alt='Game Character' className='w-[543px] h-[830px]'/>
+                </div>
             </div>
 
-            <div className='absolute bottom-1 '>
-              <Image src={Warrior2} alt='Game Character' className='w-[611px] h-[830px] '/>
+            <div className='w-[450px] mx-auto mt-6 sm:w-[450px] md:w-[550px] lg:w-[550px] lg:mt-40 xl:w-[650px] xl:absolute xl:bottom-1 '>
+              <Image src={Warrior2} alt='Game Character' />
             </div>
 
           </main>
 
       </section>
-
+      <section>
       {/* This is the meet the team section */}
-        <h1 className='text-[40px] font-semibold leading-[51px] text-center text-[#292929] mt-[80px] mb-[60px]'>Meet the team</h1>
-      <section className='bg-[#FAF7F7] h-[724px]'>
-          {/* This is where we display the images of each team member */}
-            <main className='w-[1176px] h-[566px] pt-10'>
-              <div className='pentagon_b'>
-                <div className='pentagon text-transparent hover:text-white'>
-                    <h1 className='mb-[24px] text-center text-[12px] font-semibold leading-4 w-[109px] h-[16px]'>Lead Character artist</h1>
-                </div>
-              </div>
-            </main>
-
+      <div className='flex justify-center w-[500px] sm:w-[900px] lg:w-full'>
+        <h1 className='mt-28 text-center mb-12 text-2xl lg:text-4xl lg:mt-48  xl:text-[40px] font-semibold xl:leading-[51px] xl:text-center text-[#292929] xl:mt-[80px] xl:mb-[60px]'>Meet the team</h1>
+        </div>
+        <div className='w-[500px] sm:w-[900px] lg:w-full  bg-[#FAF7F7] h-auto xl:pb-36 '>
+          <div className='w-[30em]  flex flex-wrap justify-center mx-auto pb-12 sm:w-[39em] sm:flex sm:flex-wrap sm:justify-center  md:w-[50em]  lg:w-[60em] xl:w-[80em] lg:flex lg:flex-wrap lg:justify-center gap-10 '>
+            <Team bgImg="bg-[url('../Assets/img/Charles.png')]"/>
+            <Team bgImg="bg-[url('../Assets/img/Charles.png')]"/>
+            <Team bgImg="bg-[url('../Assets/img/Charles.png')]"/>
+            <Team bgImg="bg-[url('../Assets/img/Charles.png')]"/>
+          </div>
+        </div>
       </section>
+
+
       </motion.div>
 
-      <footer>
+      <footer className='w-[500px] sm:w-[900px] lg:w-full mt-12'>
         <Footer/>
       </footer>
 

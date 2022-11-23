@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
 import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
+import logoWhite from '../Assets/logos/Nok-Logo white 1.svg'
 import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
@@ -29,7 +30,10 @@ const Book = () => {
   return (
     <div>
         {/* Navbar goes here */}
-      <NavBar logo={logoBlack} color="text-black" paddingTop="pt-[1px]" shadow="shadow-md"/>
+      <NavBar  logo={logoBlack} logoB={logoWhite} color="text-black" colorB='text-white' paddingTop="pt-[1px]" 
+      shadow="shadow-md" 
+      bgBlack='bg-white'
+      bgWhite='bg-slate-900'/>
       <motion.div initial='hidden' animate='visible'
       variants={{
         hidden: {
@@ -45,35 +49,32 @@ const Book = () => {
         },
       }}
       >
-        <main className='px-[501px] h-[1355px] mt-[47px] mb-[29px] bg-[url("../Assets/img/Book_Bg.png")] bg-contain '>
-            <div className='pt-[324px]'>
+        <main className='xl:px-[501px] lg:px-[350px] lg:h-[1355px] w-full lg:bg-cover h-[1000px] bg-no-repeat flex flex-col  mb-[29px] bg-[url("../Assets/img/Book_Bg.png")] xl:bg-contain '>
+            <div className=' pt-[150px] w-[350px] mx-auto lg:mx-0 lg:w-[500px] lg:pt-[324px]'>
                 <h1 className='text-[35px] font-semibold leading-[42px] text-[#242222] text-center mb-[16px]'>BOOK A SERVICE</h1>
-                <p className='w-[535px] h-[68px] text-center text-[#242222] font-normal leading-[17px] text-[14px]'>Select the service you want us render to you from the list. If you’re not sure on what to select, just choose others. Also input your if you have one budget and project requirement specifications. We’ll get back to you with a free quote in no time.</p>
+                <p className='lg:w-[535px] w-[350px] h-[68px] text-center text-[#242222] font-normal leading-[17px] text-[14px]'>Select the service you want us render to you from the list. If you’re not sure on what to select, just choose others. Also input your if you have one budget and project requirement specifications. We’ll get back to you with a free quote in no time.</p>
             </div>
             {/* Booking form goes here */}
             <form className='mt-[36px]'>
 
-                <div >
+                <div className='w-[350px] mx-auto lg:mx-0 lg:w-[500px]'>
                   {/* Select your project category */}
                     <h3 className='pb-[11px] text-[#9D9D9D] text-[14px] font-normal leading-[17px]'>Categories</h3>
         
-                    <select  className='w-[506px] h-[59px] bg-white pl-[10px] border-r-[10px] border-r-transparent' >
+                    <select  className='lg:w-[506px] w-[350px] mx-auto h-[59px]  bg-white lg:pl-[10px] border-r-[10px] border-r-transparent' >
                         <option value="SELECT PROJECT CATEGORY" >SELECT PROJECT CATEGORY</option>
                         <option value="Animation and modelling" >Animation and modelling</option>
                         <option value="Graphics design" >Graphics design</option>
                         <option value="Concept arts design" >Concept arts design</option>
                         <option value="VFX and Manipulation" >VFX and Manipulation</option>
                         <option value="Game development" >Game development</option>
-
-
-
                     </select>    
                 </div>
           {/* Describe your project text area */}
-                <div className='mt-[20px] '>
+                <div className='mt-[20px] w-[350px] lg:w-[500px] mx-auto  '>
                     <h3 className='pb-[11px] text-[#9D9D9D] text-[14px] font-normal leading-[17px]'>Describe the Project</h3>
 
-                    <textarea name="message" className='w-[506px] h-[135px] pl-[18px] pt-[15px] mb-[37px]'></textarea>
+                    <textarea name="message" className='lg:w-[506px]  w-[350px] h-[135px] pl-[18px] pt-[15px] mb-[37px]'></textarea>
                 </div>
 
             {/* Select currency */}
@@ -89,12 +90,12 @@ const Book = () => {
 
                 {/* Enter timeline */}  
 
-                  <main className='mt-[27px] h-[95px] mb-[23px]'>
+                  <main className='mt-[27px] w-[350px] mx-auto h-[95px] mb-[23px]'>
                     <h3 className='pb-[11px] text-[#9D9D9D] text-[14px] font-normal leading-[17px]'>Enter Timeline</h3>
                       <div className='flex items-center gap-[20px]'>
-                          <Input inputType="number" width="w-[243px]" height="h-[42px]"  padding_x="px-[20px]"/>
+                          <Input inputType="number" width="lg:w-[243px]  w-[200px]" height="h-[42px]"  padding_x="px-[20px]"/>
  
-                          <select  className=' w-[243px] h-[42px] bg-white pl-[10px] border-r-[10px] border-r-transparent' >
+                          <select  className='w-[150px] lg:w-[243px] h-[42px] bg-white pl-[10px] border-r-[10px] border-r-transparent' >
                             {options?.map( (option) => (<option value={option.value} >{option.label}</option>))}
                           </select>  
 

@@ -1,6 +1,7 @@
 .hover-underline-animation {
     display: inline-block;
     position: relative;
+    font-weight: bolder;
   }
   
   .hover-underline-animation:after {

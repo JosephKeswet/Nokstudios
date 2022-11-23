@@ -1,71 +1,57 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
 import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
-import Gallery from '../components/Gallery'
-import Videos from '../components/Videos'
-import Footer from '../components/Footer'
 import logoWhite from '../Assets/logos/Nok-Logo white 1.svg'
-import {motion} from 'framer-motion'
+import Photos from '../components/Photos'
+import VideoSection from '../components/VideoSection'
 
 const MainGallery = () => {
     const [color,setColor] = useState(true)
+    const [tab,setTab] = useState(1)
     const bgRed = "bg-[#DC5539]"
     const bgGray = "bg-[#F2F2F2]"
 
 
-    const [show,handleShow] = useState(false);
-
-
-    // This function toggles the state of the navbar background color
-    const transitionNavBar = ()=>{
-      if(window.scrollY > 10){
-        handleShow(true);
-      }else{
-        handleShow(false)
-      }
-    }
-  
-    // This runs as soon as the component mounts and when the user scrolls down
-    useEffect(()=>{
-      window.addEventListener("scroll" , transitionNavBar)
-      // clean up function
-      return ()=> window.removeEventListener("scroll", transitionNavBar)
-    },[])
 
   return (
     <div>
-        <div>
-        <NavBar logo={logoBlack} color={`text-black ${show && 'text-white'}`} navBg={`bg-white ${show && 'bg-black'}`} paddingTop="pt-[1px]" shadow="shadow-md"/>
+        <div className='pb-20 lg:pb-48 xl:pb-56'>
+        <NavBar logo={logoBlack} logoB={logoWhite}
+        colorB='text-white' 
+        color='text-black'
+        bgBlack='bg-white'
+        bgWhite='bg-slate-900'
+        paddingTop="pt-[1px]" 
+        shadow="shadow-md"/>
         </div>
- 
+        <section>
+          <div className="flex items-center justify-center  ">
+              <button className={`w-[5em] h-[3em] sm:w-[10em] md:w-[12em] lg:w-[12em] transition-all duration-1000 ${color? bgRed : bgGray} 
+              text-[0.8em] sm:text-lg lg:text-xl font-Inter text-center font-medium cursor-pointer z-10`} onClick={() =>{
+                setColor(true)
+                setTab(1)
+              }} >GALLERY</button>
+              <button className={`w-[5em] h-[3em] sm:w-[10em] md:w-[12em] lg:w-[12em] transition-all duration-1000 ${!color? bgRed : bgGray} 
+              text-[0.8em] sm:text-lg lg:text-xl font-Inter text-center font-medium cursor-pointer z-10`} onClick={() => {
+                setColor(false)
+                setTab(2)
+              }}>VIDEOS</button>
+          </div>
 
-      {/* <motion.div layout  > */}
-      <motion.div initial='hidden' animate='visible'
-      variants={{
-        hidden: {
-          scale: .8,
-          opacity: 0
-        },
-        visible: {
-          scale: 1,
-          opacity: 1,
-          transition: {
-            delay: .7
-          }
-        },
-      }}
-      >
-        <div className="flex items-center justify-center mt-[51px]">
-            <button className={`w-[185px] h-[54px] transition-all duration-1000 ${color? bgRed : bgGray} 
-            text-[35px] font-Inter text-center font-medium cursor-pointer z-10`} onClick={() => setColor(true)} >GALLERY</button>
-            <button className={`w-[185px] h-[54px] transition-all duration-1000 ${!color? bgRed : bgGray} 
-            text-[35px] font-Inter text-center font-medium cursor-pointer z-10`} onClick={() => setColor(false)}>VIDEOS</button>
-        </div>
-      </motion.div>
-
-        {/* </motion.div> */}
-    
-        {color? <Gallery/>:<Videos/>}
+          <main className='mt-10  '>
+            {tab == 1 ? <div>
+              <Photos/>
+            </div> :
+            <div>
+              <VideoSection/>
+            </div>
+            }
+          </main>
+        </section>
+{/*  
+      <div className='w-full relative bottom-0  '>
+       <Footer/>
+       </div> */}
 
     </div>
   )
