@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.9.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -23,7 +24,8 @@
     "react-dropdown-select": "^4.9.0",
     "react-player": "^2.10.1",
     "react-polygon": "^0.2.0",
-    "react-select": "^5.4.0"
+    "react-select": "^5.4.0",
+    "react-toastify": "^9.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",

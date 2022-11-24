@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import NavBar from '../components/NavBar'
 import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
 import logoWhite from '../Assets/logos/Nok-Logo white 1.svg'
@@ -8,10 +8,27 @@ import { faInstagram, faPinterest, faSquareFacebook, faTwitter, faYoutube } from
 import Input from '../components/Input'
 import Button from '../components/Button'
 import {motion} from 'framer-motion'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 // import Contact_Bg from '../Assets/img/Contact_Bg.png'
 
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_CONTACT_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_API_KEY)
+      .then((result) => {
+          toast.success("Message sent successfully")
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div>
         {/* This is where the navbar goes */}
@@ -58,18 +75,20 @@ const Contact = () => {
                 </ul>
             </div>
             {/* This is the contact form */}
+            <form ref={form} onSubmit={sendEmail}>
             <div className='w-[350px] mx-auto lg:w-[704px] lg:h-[376px] lg:ml-[76px] '>
-                <Input inputType="text" width="w-[350px] lg:w-[500px] xl:w-[704px]" height="h-[57px]" placeholder="Enter your name please" paddingLeft="pl-[19px]" marginBottom="mb-[24px]" />
-                <Input inputType="text" width="w-[350px] lg:w-[500px] xl:w-[704px]" height="h-[57px]" placeholder="Enter your email address" paddingLeft="pl-[19px]" marginBottom="mb-[24px]"/>
-                <textarea name="message" className='w-[350px] lg:w-[500px] xl:w-[704px] h-[139px] pl-[18px] pt-[15px] mb-[37px]' placeholder='Type message here'></textarea>
+                <Input inputType="text" width="w-[350px] lg:w-[500px] xl:w-[704px]" height="h-[57px]" placeholder="Enter your name please" name='from_name' paddingLeft="pl-[19px]" marginBottom="mb-[24px]" />
+                <Input inputType="text" width="w-[350px] lg:w-[500px] xl:w-[704px]" height="h-[57px]" placeholder="Enter your email address" name='user_email' paddingLeft="pl-[19px]" marginBottom="mb-[24px]"/>
+                <textarea name="message" className='w-[350px] lg:w-[500px] xl:w-[704px] h-[139px] pl-[18px] pt-[15px] mb-[37px]'  placeholder='Type message here'></textarea>
 
                 <motion.div 
               whileTap={{scale: 0.95}}
               className='cursor-pointer  mb-10 hover:drop-shadow-xl'
               >
-                <Button btnText="SEND" bgColor="bg-[#DC5539]" width="w-[246px]" height="h-[50px]" fontSize="text-[20px]" lineHeight="leading-[24px]" fontWeight="font-bold" textColor="text-[#FFFFFF]"/>
+                <input type='submit' value='SEND' className='bg-[#DC5539] w-[246px] h-[50px] text-[20px] leading-[24px] font-bold text-white'/>
               </motion.div>
             </div>
+            </form>
             {/* </div> */}
         </main>
 
