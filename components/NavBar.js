@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import {motion} from 'framer-motion'
 import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
 
 // import '../styles/select.css'
 
@@ -19,16 +19,22 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
   }
 
   const [show,handleShow] = useState(false);
+  const [myIcon,setIcon] = useState();
   const [toggleNav,setToggle] = useState(false)
 
   const handleToggle = ()=>{
    toggleNav ? setToggle(false) : setToggle(true)
+   if (myIcon == faBarsStaggered) {
+    setIcon(faBars)
+   }else{
+    setIcon(faBarsStaggered)
+   }
   }
 
 
   // This function toggles the state of the navbar background color
   const transitionNavBar = ()=>{
-    if(window.scrollY > 250){
+    if(window.scrollY > 50){
       handleShow(true);
     }else{
       handleShow(false)
@@ -128,7 +134,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
                 </Link>
  
             </ul>
-          <FontAwesomeIcon onClick={()=> handleToggle()} icon={faBars} className='w-[34px] h-[24px] text-[#DC5539] lg:hidden cursor-pointer'/>
+        <FontAwesomeIcon onClick={()=> handleToggle()} icon={myIcon ? myIcon : faBars} className='w-[34px] h-[24px] text-[#DC5539] lg:hidden cursor-pointer'/> 
         </nav>
       
         </motion.div>

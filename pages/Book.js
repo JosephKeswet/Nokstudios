@@ -96,13 +96,17 @@ const Book = () => {
                 </div>
 
             {/* Select currency */}
-                <h3 className='text-center text-[#9D9D9D] text-[16px] font-bold leading-[17px]'>Select Currency</h3>
+                <h3 className='text-center text-[#9D9D9D] text-[16px] font-bold leading-[17px]'>Budget</h3>
 
                 <div className='flex  justify-center '>
                 <select  className='w-[243px] h-[42px] bg-white pl-[10px] mt-[8px] border-r-[10px] border-r-transparent' name='currency' >
-                        <option value="USD" name='currency' >USD</option>
-                        <option value="NGN" name='currency' >NGN</option>
-                        <option value="YEN" name='currency' >YEN</option>
+                        <option value="50USD" name='currency' >50USD</option>
+                        <option value="100USD" name='currency' >100USD</option>
+                        <option value="200USD" name='currency' >200USD</option>
+                        <option value="500USD" name='currency' >500USD</option>]
+                        <option value="750USD" name='currency' >750USD</option>
+                        <option value="1000USD" name='currency' >1000USD</option>
+                        <option value="1500USD" name='currency' >1500USD</option>
                     </select>    
                 </div>
 
