@@ -48,7 +48,7 @@ export default function Home() {
         },
       }}
       >
-          <div className='lg:bg-[url("https://64.media.tumblr.com/64e5d0c2dce58a311067b5bee5933ac8/8cd937f7baab925b-08/s540x810/7f3913654c7f40dd5089bea3c4a100800a7beb9b.gif")] h-[53px] lg:h-[781px] bg-cover'>
+          <div className='lg:bg-[url("https://64.media.tumblr.com/64e5d0c2dce58a311067b5bee5933ac8/8cd937f7baab925b-08/s540x810/7f3913654c7f40dd5089bea3c4a100800a7beb9b.gif")] h-[53px] mx-auto lg:h-[781px] bg-cover'>
           <motion.div initial='hidden' animate='visible'
       variants={{
         hidden: {
@@ -86,14 +86,14 @@ export default function Home() {
             delay: 1
           }
         },
-      }} className='text-center text-2xl md:text-3xl mb-[20px] sm:text-2xl lg:text-4xl lg:mt-[17px] lg:mb-[80px]'>What we do</motion.h1>
+      }} className='text-center text-2xl md:text-3xl mb-[20px] font-Lora sm:text-2xl  lg:text-4xl lg:mt-[35px] lg:mb-[80px]'>What we do</motion.h1>
         <main className='lg:relative lg:h-[1715px]'>
 
           {/* Angel container */}
             <div className='lg:flex lg:justify-center  lg:gap-[62px] '>
               <div className='hidden lg:inline lg:ml-[70px]'>
-                <p className='lg:text-[28px] lg:leading-[40px] lg:w-[643px] lg:font-normal lg:pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
-                <Image src={Pen} alt='Pen Icon' className='lg:w-[144px] lg:h-[144px] animate-pulse'/>
+                <p className='lg:text-[28px] font-Ubuntu lg:leading-[40px] lg:w-[643px] lg:font-normal lg:pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
+                <Image src={Pen} alt='Pen Icon' className='lg:w-[144px] lg:h-[144px]'/>
               </div>
               <motion.div 
               // whileHover={{
@@ -109,9 +109,9 @@ export default function Home() {
               </motion.div>
               <div className='lg:hidden w-[320px] sm:w-[420px] mx-auto mt-[280px] sm:mt-[450px] md:mt-[550px]'>
                 <div className='w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] '>
-                  <Image src={Pen} alt='Pen Icon' className='w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] lg:animate-pulse'/>
+                  <Image src={Pen} alt='Pen Icon' className='w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] '/>
                 </div>
-                <p className='text-[16px] text-center w-[320px] sm:w-[420px] leading-[16px] sm:leading-[20px] sm:text-[20px]  font-normal pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
+                <p className='text-[16px] text-center w-[320px] font-Ubuntu sm:w-[420px] leading-[16px] sm:leading-[20px] sm:text-[20px]  font-normal pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
               </div>
             </div>
 
@@ -132,10 +132,10 @@ export default function Home() {
               </motion.div>
 
               <div className='mt-[530px] sm:mt-[720px] mx-auto w-[320px] sm:w-[420px] md:w-[520px] md:mt-[950px]'>
-                  <div className='lg:w-[144px] lg:h-[144px] w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] sm:mb-[10px] lg:animate-pulse '>
-                    <Image src={BoxIcon} alt='Box Icon' className='lg:w-[144px] lg:h-[144px] lg:animate-pulse '/>
+                  <div className='lg:w-[144px] lg:h-[144px] w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] sm:mb-[10px] '>
+                    <Image src={BoxIcon} alt='Box Icon' className='lg:w-[144px] lg:h-[144px]  '/>
                   </div>
-                  <p className='text-[16px] sm:text-[20px] sm:w-[400px] md:w-[500px] md:text-[22px] md:leading-[24px] sm:leading-[24px] leading-[18px] text-center lg:text-left  lg:text-[24px] lg:leading-[40px] w-[315px] h-[129px] lg:w-[643px] font-normal lg:pb-[20px]'>We bring works to life make imaginations a reality. Watch your dreams unfold and make worlds of your own.</p>
+                  <p className='text-[16px] sm:text-[20px] sm:w-[400px] md:w-[500px] md:text-[22px] md:leading-[24px] sm:leading-[24px] leading-[18px] text-center lg:text-left  lg:text-[24px] lg:leading-[40px] w-[315px] h-[129px] lg:w-[643px] font-normal lg:pb-[20px] font-Ubuntu'>We bring works to life make imaginations a reality. Watch your dreams unfold and make worlds of your own.</p>
               </div>
             </div>
             
@@ -145,7 +145,7 @@ export default function Home() {
       <div id='services' name="services" ref={ref}/> 
       {/* Our services section */}
       <section > 
-        <h1 className='text-center text-2xl lg:text-4xl lg:mt-[200px] mb-[100px] lg:mb-[200px]'>How may we be of service?</h1>
+        <h1 className='text-center font-Lora text-2xl lg:text-4xl lg:mt-[200px] mb-[100px] lg:mb-[200px]'>How may we be of service?</h1>
         <main className='flex flex-wrap gap-[90px] justify-center '>
           {/* Cards for each service */}
    
@@ -156,7 +156,7 @@ export default function Home() {
         </main>
       </section>
     {/* This section houses the BOOK NOW Button */}
-      <section className='flex justify-center items-center mt-[80px] lg:mt-[180px] mb-[265px]'>
+      <section className='flex justify-center items-center mt-[80px] lg:mt-[180px] mb-[5em]'>
          {/* <Link href='/Book'> */}
          <motion.div 
               // whileHover={{

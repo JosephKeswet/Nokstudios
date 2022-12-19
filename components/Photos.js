@@ -16,34 +16,34 @@ const Photos = () => {
   return (
     <div className='h-screen flex flex-col'>
         <section className='flex flex-wrap justify-center mb-20'>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image1} width={500} height={500} objectFit='cover' alt='Gallery image' />
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image2} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image3} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image4} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image5} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image6} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image7} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image8} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image9} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
-            <div className='w-[7em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
+            <div className='w-[11em] sm:w-[12em] md:w-[15em] lg:w-[20em] xl:w-[30em]'>
                 <Image src={Image10} width={500} height={500} objectFit='cover' alt='Gallery image'/>
             </div>
             

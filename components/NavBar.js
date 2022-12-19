@@ -14,7 +14,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
   console.log(router.pathname)
   const getColor = (curr)=>{  
     if (router.pathname === curr) {
-      return '#0066FF'
+      return '#DC5539'
     }
   }
 
@@ -59,7 +59,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
                   <Link href='/#services' >
                   <motion.li 
                   whileTap={{scale: 0.9}}
-                  className='hover-underline-animation cursor-pointer'
+                  className={`hover-underline-animation cursor-pointer ${color}`}
                   // onCanPlay={handleClick('/')}
                   >Services</motion.li>
                   </Link>
@@ -69,7 +69,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
         const ScrollTo = ()=>{
           return  ( <motion.li
                     whileTap={{scale: 0.9}}
-                    className='hover-underline-animation cursor-pointer' onClick={scrollFunc}>Services</motion.li>
+                    className={`hover-underline-animation cursor-pointer ${show ? 'text-black' : 'text-white'}`} onClick={scrollFunc}>Services</motion.li>
                     )
                 
         }
@@ -89,12 +89,14 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
           }
         },
       }}
-      
+      className='bg-white bg-opacity-100'
       >
-        <nav className={` flex  justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed z-50 ${paddingTop} ${shadow} lg:h-[139px] h-[53px] items-center ${show ? bgWhite : bgBlack} ${transition} duration-700   z-10`}>
+        <nav className={` flex  bg-white  bg-opacity-100  z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-6 ${show ? 'shadow-xl' : ''} lg:h-[139px] h-[53px] items-center ${show ? 'bg-white' : 'bg-transparent'} ${transition} duration-700   z-10`}>
 
-            <div className={`inline  w-[80px] h-[50px] lg:w-[124px] ${show ? 'pt-4' : 'pt-0'}  lg:h-[62px]`} >
-                <Image src={show ? logoB : logo} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
+            <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[200px] ${show ? 'pt-4' : 'pt-0'}  lg:h-[62px]`} >
+              <Link href='/'>
+                <Image src={logo} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
+              </Link>
             </div>
             {/* <div className='lg:hidden hidden w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]' >
                 <Image src={logo} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
@@ -105,14 +107,14 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
                 <Link href='/' >
                   <motion.li
                     whileTap={{scale: 0.9}}
-                  className='hover-underline-animation cursor-pointer' style={{color:getColor('/')}}>Home</motion.li>
+                  className={`hover-underline-animation cursor-pointer ${show ? 'text-white' : 'text-black'}`} style={{color:getColor('/')}}>Home</motion.li>
                 </Link>
      
             
                 <Link href='/About'>
                 <motion.li 
                 whileTap={{scale: 0.9}}
-                className='hover-underline-animation cursor-pointer' style={{color:getColor('/About')}}>About Us</motion.li>
+                className={`hover-underline-animation cursor-pointer ${show ? 'text-black' : 'text-white'}`} style={{color:getColor('/About')}}>About Us</motion.li>
                 </Link>
 
               {/* Here i check the path and render a particular component based on the pathname value */}
@@ -123,14 +125,14 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
                 <Link href='/MainGallery'>
                 <motion.li 
                 whileTap={{scale: 0.9}}
-                className='hover-underline-animation cursor-pointer' style={{color:getColor('/MainGallery')}}>Our Works</motion.li>
+                className={`hover-underline-animation cursor-pointer ${show ? 'text-black' : 'text-white'}`} style={{color:getColor('/MainGallery')}}>Our Works</motion.li>
                 </Link>
 
 
                 <Link href='/Contact'>
                 <motion.li 
                 whileTap={{scale: 0.9}}
-                className='hover-underline-animation cursor-pointer' style={{color:getColor('/Contact')}}>Contact Us</motion.li>
+                className={`hover-underline-animation cursor-pointer ${show ? 'text-black' : 'text-white'}`} style={{color:getColor('/Contact')}}>Contact Us</motion.li>
                 </Link>
  
             </ul>
@@ -138,8 +140,8 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
         </nav>
       
         </motion.div>
-          <div className={`${!toggleNav && 'hidden'} w-40 h-60 lg:hidden bg-white fixed top-[52px] border-l-8 border-[#DC5539] left-auto right-0 z-50 flex flex-col`}>
-            <ul className='text-black text-[20px] font-normal leading-[14px] mt-10'>
+          <div className={`${!toggleNav && 'hidden'} w-40 h-52 lg:hidden bg-white fixed top-[52px] border-l-8 border-[#DC5539] left-auto right-0 z-50 flex flex-col`}>
+            <ul className='text-black text-[20px] font-normal leading-[14px] mt-5'>
               <Link href='/'><li className='mb-6 cursor-pointer text-right mr-4 hover:text-[#DC5539]'>Home</li></Link>
               <Link href='/About'><li className='mb-6  cursor-pointer text-right mr-4 hover:text-[#DC5539]'>About</li></Link>
               <Link href='/#services'><li className='mb-6 cursor-pointer text-right mr-4 hover:text-[#DC5539]'>Services</li></Link>

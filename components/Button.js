@@ -6,7 +6,7 @@ const Button = ({btnText,bgColor,height,width,fontSize,lineHeight,fontWeight,tex
 
   return (
     <div>
-        <button className={`${bgColor} ${width} ${height} ${fontSize} ${lineHeight} ${fontWeight}
+        <button className={`${bgColor} font-Ubuntu ${width} ${height} ${fontSize} ${lineHeight} ${fontWeight}
          ${textColor}`}       
          onClick={routeFunc}>{btnText}</button>
     </div>

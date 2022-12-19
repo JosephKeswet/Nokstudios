@@ -21,7 +21,7 @@ const Cards = ({img,service,position,ml}) => {
             <Image src={img} alt='Concept Art Service' className='w-[144px] h-[144px]'/>
             <div className='flex items-center justify-center lg:w-[376px] lg:h-[101px] w-[300px] h-[80px] bg-[#212121] absolute bottom-[-1px] z-10'>
                 <div className='flex justify-center items-center lg:w-[334px] lg:h-[68px] w-[224px] h-[45px]  hover:translate-y-1 hover:translate-x-2 transition-all duration-500'>
-                    <h3 className='text-sm  lg:text-xl lg:leading-[23px] font-medium text-[#FEFEFE]'>{service}</h3>
+                    <h3 className='text-sm font-Ubuntu lg:text-xl lg:leading-[23px] font-medium text-[#FEFEFE]'>{service}</h3>
                     <FontAwesomeIcon icon={faArrowRight} className="text-white lg:w-[68px] lg:h-[68px]
                     w-[35px] h-[35px] pl-[10px] "/>
                 </div>
