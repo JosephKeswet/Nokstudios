@@ -64,8 +64,10 @@ export default function Home() {
         },
       }}
       >
+        <div className='z-50'>
           <NavBar logo={logoBlack} logoB={logoWhite} color="text-black md:text-white" colorB='text-white md:text-white' bgBlack='bg-white md:bg-transparent'
           bgWhite='bg-slate-900' transition='transition-all' paddingTop="pt-[25px]" scrollValue='700' scrollFunc={handleClick} myref={ref} />
+        </div>
       </motion.div>
 
           </div>

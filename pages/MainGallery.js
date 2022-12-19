@@ -148,7 +148,7 @@ const MainGallery = () => {
     </div>
       </div>
         </div>
-        <section className='overflow-y-scroll'>
+        <section className=''>
           <div className="flex items-center justify-center  ">
               <button className={`w-[5em] h-[3em] sm:w-[10em] md:w-[12em] lg:w-[12em] transition-all duration-1000 ${color? bgRed : bgGray} 
               text-[0.8em] sm:text-lg lg:text-xl font-Inter text-center font-medium cursor-pointer z-10`} onClick={() =>{

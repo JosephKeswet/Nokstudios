@@ -34,7 +34,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
 
   // This function toggles the state of the navbar background color
   const transitionNavBar = ()=>{
-    if(window.scrollY > 50){
+    if(window.scrollY > 700){
       handleShow(true);
     }else{
       handleShow(false)
@@ -91,11 +91,11 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
       }}
       className='bg-white bg-opacity-100'
       >
-        <nav className={` flex  bg-white  bg-opacity-100  z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-6 ${show ? 'shadow-xl' : ''} lg:h-[139px] h-[53px] items-center ${show ? 'bg-white' : 'bg-transparent'} ${transition} duration-700   z-10`}>
+        <nav className={` flex  bg-white  bg-opacity-100  z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-6 ${show ? 'shadow-xl' : ''} lg:h-[139px] h-[53px] items-center bg-transparent ${transition} duration-700   z-10`}>
 
             <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[200px] ${show ? 'pt-4' : 'pt-0'}  lg:h-[62px]`} >
               <Link href='/'>
-                <Image src={logo} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
+                <Image src={show ? logo : logoB} alt='logo' width={250} height={200} className='lg:w-[124px]  lg:h-[62px]'/>
               </Link>
             </div>
             {/* <div className='lg:hidden hidden w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]' >
