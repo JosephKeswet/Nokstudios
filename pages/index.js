@@ -95,18 +95,11 @@ export default function Home() {
                 <p className='lg:text-[28px] font-Ubuntu lg:leading-[40px] lg:w-[643px] lg:font-normal lg:pb-[20px]'>From the pen strokes to the mouse clicks, we design and create with an artistic touch.</p>
                 <Image src={Pen} alt='Pen Icon' className='lg:w-[144px] lg:h-[144px]'/>
               </div>
-              <motion.div 
-              // whileHover={{
-              //   scale: 1.01,
-              //   transition: {
-              //     duration: .2
-              //   }
-              // }}
-              whileTap={{scale: 0.9}}
-              className='cursor-pointer md:drop-shadow-lg md:hover:drop-shadow-2xl lg:w-[641px] lg:h-[906px] w-[326px] h-[221px] sm:w-[426px] md:w-[526px] mx-auto  lg:z-20'
+              <div
+              className='cursor-pointer  lg:w-[641px] lg:h-[906px] w-[326px] h-[221px] sm:w-[426px] md:w-[526px] mx-auto  lg:z-20'
               >
                 <Image src={Angel} alt='Angel Art' className='lg:w-[641px] lg:h-[906px] w-[326px] h-[221px] '/>
-              </motion.div>
+              </div>
               <div className='lg:hidden w-[320px] sm:w-[420px] mx-auto mt-[280px] sm:mt-[450px] md:mt-[550px]'>
                 <div className='w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] '>
                   <Image src={Pen} alt='Pen Icon' className='w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] '/>
@@ -118,18 +111,11 @@ export default function Home() {
 
           {/*Street boy container  */}
             <div className='lg:flex lg:items-end gap-[62px] lg:absolute lg:bottom-[5px]'>
-            <motion.div 
-            // whileHover={{
-            //     scale: 1.01,
-            //     transition: {
-            //       duration: .2
-            //     }
-            //   }}
-              whileTap={{scale: 0.9}}
-              className='cursor-pointer md:drop-shadow-lg md:hover:drop-shadow-2xl w-[326px] h-[121px] sm:w-[426px] md:w-[526px] mx-auto lg:w-[641px] lg:ml-[70px] lg:h-[1162px] '
+            <div
+              className='cursor-pointer   w-[326px] h-[121px] sm:w-[426px] md:w-[526px] mx-auto lg:w-[641px] lg:ml-[70px] lg:h-[1162px] '
               >
               <Image src={StreetBoy} alt='Street Boy Art' className='lg:w-[641px] lg:h-[1162px]'/>
-              </motion.div>
+              </div>
 
               <div className='mt-[530px] sm:mt-[720px] mx-auto w-[320px] sm:w-[420px] md:w-[520px] md:mt-[950px]'>
                   <div className='lg:w-[144px] lg:h-[144px] w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] sm:mb-[10px] '>
