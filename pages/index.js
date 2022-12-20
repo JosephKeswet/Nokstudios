@@ -134,7 +134,7 @@ export default function Home() {
       {/* Our services section */}
       <section > 
         <h1 className='text-center font-Lora text-2xl lg:text-4xl lg:mt-[200px] mb-[100px] lg:mb-[200px]'>How may we be of service?</h1>
-        <main className='flex flex-wrap gap-[90px] justify-center '>
+        <main className='flex flex-wrap gap-40 justify-center '>
           {/* Cards for each service */}
    
           <Cards img={ConceptArt} service="CONCEPT ARTS DESIGN" position="relative"/>

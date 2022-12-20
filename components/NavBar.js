@@ -91,7 +91,7 @@ const NavBar = ({logo,logoB,color,paddingTop,shadow,scrollFunc,myRef,colorB,bgWh
       }}
       className='bg-white bg-opacity-100'
       >
-        <nav className={` flex  bg-white  bg-opacity-100  z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-6 ${show ? 'shadow-xl' : ''} lg:h-[139px] h-[53px] items-center bg-transparent ${transition} duration-700   z-10`}>
+        <nav className={` flex  bg-white  bg-opacity-100  z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-6 ${show ? 'shadow-xl' : ''} lg:h-[139px] h-[53px] items-center bg-transparent ${transition} duration-700 `}>
 
             <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[200px] ${show ? 'pt-4' : 'pt-0'}  lg:h-[62px]`} >
               <Link href='/'>
