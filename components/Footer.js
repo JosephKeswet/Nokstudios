@@ -33,7 +33,7 @@ const Footer = () => {
                     ><FontAwesomeIcon icon={faInstagram} className='cursor-pointer hover:text-red-300 w-[19px] h-[19px] md:w-[36px] md:h-[36px]'/></motion.li>
                     </Link>
 
-                    <Link href="#">
+                    <Link href="https://www.youtube.com/@nokstudio9909">
                     <motion.li
                        whileTap={{
                         scale: 0.7
