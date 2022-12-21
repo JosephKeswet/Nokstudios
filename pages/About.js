@@ -100,8 +100,8 @@ const About = () => {
                 <Image src={logoBlack}  alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
               </Link>
             </div>
-            {/* <div className='lg:hidden hidden w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]' >
-                <Image src={logo} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
+            {/* <div className='lg:hidden flex w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]' >
+                <Image src={logoBlack} alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
             </div> */}
 
             <ul className={`lg:flex hidden justify-between gap-[50px] text-black`}>

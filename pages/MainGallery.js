@@ -62,7 +62,7 @@ const MainGallery = () => {
 
   return (
     <div>
-      <section className='min-h-full overflow-y-scroll'>
+      <section>
         <div className='pb-20 lg:pb-48 xl:pb-56'>
         {/* <NavBar logo={logoBlack} logoB={logoWhite}
         colorB='text-white' 

@@ -23,3 +23,6 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+.nav{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 69.27%, rgba(255, 255, 255, 0) 100%);
+}

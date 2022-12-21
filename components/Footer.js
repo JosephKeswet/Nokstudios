@@ -10,14 +10,14 @@ const Footer = () => {
   return (
     <div>
         <main className='bg-[#0F0E0E] w-full h-full' >
-            <div className='flex items-center px-[10px] justify-center gap-[20px] md:justify-between lg:h-[236px] h-[91px]'>
+            <div className='flex items-center px-[10px] justify-between gap-[20px] md:justify-between lg:h-[236px] h-[91px]'>
                 <Link href="/Contact">
                     <h2 className='text-[12px] md:text-xl text-white cursor-pointer hover:text-gray-300'>Contact Us</h2>
                 </Link>
                 
                 {/* This contains the social icons */}
-                <ul className="flex items-center lg:gap-[70px] gap-[12px] text-[#DC5539] lg:text-4xl">
-                    <Link href="https://web.facebook.com/?_rdc=1&_rdr">
+                <ul className="flex items-center lg:gap-[70px] gap-[12px] text-[6px] text-[#DC5539] lg:text-4xl">
+                    <Link href="https://www.facebook.com/nokstudios">
                         <motion.li
                         whileTap={{
                             scale: 0.7
