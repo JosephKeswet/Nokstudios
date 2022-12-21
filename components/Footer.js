@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareFacebook,faInstagram,faPinterest,faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faSquareFacebook,faInstagram,faPinterest,faTwitter, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 
@@ -25,7 +25,7 @@ const Footer = () => {
                         ><FontAwesomeIcon icon={faSquareFacebook}  className='cursor-pointer hover:text-red-300 w-[19px] h-[19px] md:w-[36px] md:h-[36px]' /></motion.li>
                     </Link>
 
-                    <Link href='#'>
+                    <Link href='https://www.instagram.com/nokanimationstudios/'>
                     <motion.li
                      whileTap={{
                         scale: 0.7
@@ -41,12 +41,12 @@ const Footer = () => {
                     ><FontAwesomeIcon icon={faYoutube} className='cursor-pointer hover:text-red-300 w-[19px] h-[19px] md:w-[36px] md:h-[36px]'/></motion.li>
                     </Link>
 
-                    <Link href="#">
+                    <Link href="https://www.linkedin.com/company/nok-animation-studios/">
                     <motion.li
                        whileTap={{
                         scale: 0.7
                     }}
-                    ><FontAwesomeIcon icon={faPinterest} className='cursor-pointer hover:text-red-300 w-[19px] h-[19px] md:w-[36px] md:h-[36px]'/></motion.li>
+                    ><FontAwesomeIcon icon={faLinkedin} className='cursor-pointer hover:text-red-300 w-[19px] h-[19px] md:w-[36px] md:h-[36px]'/></motion.li>
                     </Link>
 
                     <Link href="#">
