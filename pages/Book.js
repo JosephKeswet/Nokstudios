@@ -191,7 +191,7 @@ const Book = () => {
         <main className='xl:px-[501px] lg:px-[350px] lg:h-[1355px] w-full lg:bg-cover h-[1200px] bg-no-repeat flex flex-col  mb-[29px] bg-[url("../Assets/img/Book_Bg.png")] xl:bg-contain '>
             <div className=' pt-[150px] w-[350px] mx-auto lg:mx-0 lg:w-[500px] lg:pt-[324px]'>
                 <h1 className='text-[35px] font-semibold leading-[42px] text-[#242222] text-center mb-[16px]'>BOOK A SERVICE</h1>
-                <p className='lg:w-[535px] w-[350px] h-[68px] text-center text-[#242222] font-normal leading-[17px] text-[14px]'>Select the service you would like from the list below. If you are not sure on what to select, just choose "others". Also input your budget estimate if you have one budget and project brief to give us an idea on your vision. We will get back to you with a reply in no time.</p>
+                <p className='lg:w-[535px] w-[350px] h-[68px] text-center text-[#242222] font-normal leading-[17px] text-[14px]'>Select the service you would like from the list below. If you are not sure on what to select, just choose \"others\". Also input your budget estimate if you have one budget and project brief to give us an idea on your vision. We will get back to you with a reply in no time.</p>
             </div>
             {/* Booking form goes here */}
             <form ref={form} onSubmit={sendEmail} className='mt-[36px]'>
