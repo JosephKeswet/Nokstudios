@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../components/NavBar'
 import logoBlack from '../Assets/logos/Nok-Logo_Black.png'
 import logoWhite from '../Assets/logos/Nok-Logo white 1.svg'
@@ -44,6 +44,24 @@ const Contact = () => {
   }
   const [myIcon,setIcon] = useState();
   const [toggleNav,setToggle] = useState(false)
+
+  const [show,handleShow] = useState(false);
+
+    // This function toggles the state of the navbar background color
+    const transitionNavBar = ()=>{
+     if(window.scrollY > 150){
+       handleShow(true);
+     }else{
+       handleShow(false)
+     }
+   }
+ 
+   // This runs as soon as the component mounts and when the user scrolls down
+   useEffect(()=>{
+     window.addEventListener("scroll" , transitionNavBar)
+     // clean up function
+     return ()=> window.removeEventListener("scroll", transitionNavBar)
+   },[])
 
 
   const handleToggle = ()=>{
@@ -108,7 +126,7 @@ const Contact = () => {
       }}
       className='bg-white bg-opacity-100'
       >
-        <nav className={` flex  bg-white  bg-opacity-100 shadow-xl z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-5  lg:h-[139px] h-[53px] items-center  duration-700   `}>
+        <nav className={`${show && 'nav'} flex  bg-white  bg-opacity-100 shadow-xl z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed pt-5  lg:h-[139px] h-[53px] items-center  duration-700   `}>
 
             <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[124px]  pt-4}  lg:h-[62px]`} >
                 <Image src={logoBlack}  alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
