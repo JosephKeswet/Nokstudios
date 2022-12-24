@@ -200,7 +200,7 @@ const About = () => {
                   <div className='w-[80px] lg:w-[150px]'>
                       <Image src={Workspace} alt='Workspace Icon' width={300} height={300}/>
                   </div>
-                  <p className='md:text-2xl lg:mt-[41px] font-Ubuntu lg:text-[28px] lg:leading-[40px] font-normal lg:h-[314px]'>At Nok Animation Studios, we offer high quality computer generated graphics and art services in the form of VFX as well as animated films, game assets and other 3d services for our clients in different parts of the world using innovative means to ensure our services are highly affordable while maintaining very high qualities.</p>
+                  <p className='md:text-2xl lg:mt-[41px] font-Ubuntu lg:text-[28px] lg:leading-[40px] font-normal lg:h-[314px]'>At Nok Animation Studios, we offer high quality services such as VFX, animated films, game assets creation, game development and other graphics as well as tech services for our clients in different parts of the world using innovative technologies to ensure our services are highly affordable while maintaining very high qualities.</p>
                 </div>
                 <div className='mt-6'>
                   <Image src={Warrior1} alt='Game Character' className='w-[543px] h-[830px]'/>

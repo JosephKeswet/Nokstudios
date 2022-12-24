@@ -208,8 +208,8 @@ const Contact = () => {
            {/* <div className='flex justify-center pt-[226px]'>  */}
             <div className='w-[350px] lg:w-[535px] lg:h-[219px] lg:ml-12 mx-auto'>
                 <h1 className='text-center mb-[50px] text-4xl lg:text-left lg:text-[35px] font-medium text-[0F0E0E] lg:mb-[24px] font-Inter'>CONTACT US</h1>
-                <p className='text-[14px] font-normal leading-[17px] font-Inter  text-[#0F0E0E] mb-[35px]'>Do not be shy, reach out to us using the for below and we’ll respond via mail. 
-                Our community is rapidly growing by the day. To be updated on what we do, you can simply connect with us via our social media platforms below. You can also reachout by sending us an email.</p>
+                <p className='text-[14px] font-normal leading-[17px] font-Inter  text-[#0F0E0E] mb-[35px]'>Do not be shy, reach out to us using the form below and we will respond via mail. 
+                Our community is rapidly growing by the day. To be updated on what we do, you can simply connect with us via our social media platforms below. You can also reachout by sending us an email at Contact@nokanimationstudios.com.</p>
 
                 <ul className="hidden lg:flex lg:items-center lg:gap-[50px] text-[#DC5539] text-4xl">
                     <li><FontAwesomeIcon icon={faSquareFacebook} /></li>
