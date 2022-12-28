@@ -109,7 +109,7 @@ const MainGallery = () => {
       >
         <nav className={`${show && 'nav'} flex  bg-white pt-4  bg-opacity-100 shadow-xl z-50 justify-between px-[20px] pb-[20px] lg:pl-[103px] lg:pr-[106px] w-full fixed   lg:h-[139px] h-[53px] items-center  duration-700   `}>
 
-            <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]`} >
+            <div className={`flex justify-center items-center  w-[80px] h-[50px] lg:w-[164px]  lg:h-[62px]`} >
                 <Image src={logoBlack}  alt='logo' className='lg:w-[124px]  lg:h-[62px]'/>
             </div>
             {/* <div className='lg:hidden hidden w-[80px] h-[50px] lg:w-[124px]  lg:h-[62px]' >
